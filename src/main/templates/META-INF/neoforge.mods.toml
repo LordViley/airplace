@@ -1,0 +1,31 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+issueTrackerURL="https://github.com/YOURNAME/airplace/issues"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+displayURL="https://github.com/YOURNAME/airplace"
+authors="Mikey"
+logoFile="airplace.png"
+description='''
+A builder's tool. A configurable hotkey highlights every placeable spot around you in red and
+turns the one under your crosshair green, then lets you place blocks in mid-air with no
+supporting block required.
+'''
+
+[[dependencies.${mod_id}]]
+modId="neoforge"
+type="required"
+versionRange="[${neo_version},)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="minecraft"
+type="required"
+versionRange="${minecraft_version_range}"
+ordering="NONE"
+side="BOTH"
