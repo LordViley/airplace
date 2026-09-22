@@ -13,12 +13,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Finds every placeable spot in the configured box around the player, then works out
- * which one the look-ray enters first.
+ * Finds every placeable spot in the configured box around the player, then works out which
+ * one the look-ray enters first.
  * <p>
- * This cannot use {@code Minecraft#hitResult}: vanilla raytracing skips air entirely,
- * which is exactly what we need to hit. Instead each candidate gets a phantom unit cube
- * and we keep the nearest intersection.
+ * The box always stays anchored to the player - it's a local building aid, not a long-range
+ * targeting reticle - but the box can be made as large as you like via
+ * {@code horizontalRadius}/{@code verticalRadius} in the config, and looking around picks out
+ * a specific cell within it, corners and diagonals included.
+ * <p>
+ * Finding the exact target cell can't use {@code Minecraft#hitResult}: vanilla raytracing
+ * skips air entirely, which is exactly what we need to hit. Instead each candidate gets a
+ * phantom unit cube and we keep the nearest intersection.
  */
 public final class GhostTargeting {
 
