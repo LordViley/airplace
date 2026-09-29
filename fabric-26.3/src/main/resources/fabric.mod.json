@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "airplace",
+	"version": "${version}",
+	"name": "AirPlace",
+	"description": "Highlights every placeable spot around you and lets you place blocks in mid-air - precision scaffolding for builders.",
+	"authors": [
+		"Mikey"
+	],
+	"contact": {
+		"sources": "https://github.com/LordViley/airplace"
+	},
+	"license": "MIT",
+	"icon": "assets/airplace/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.mikey.airplace.AirPlace"
+		],
+		"client": [
+			"dev.mikey.airplace.client.AirPlaceClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
