@@ -1,0 +1,27 @@
+license="${mod_license}"
+issueTrackerURL="https://github.com/LordViley/airplace/issues"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+displayURL="https://github.com/LordViley/airplace"
+authors="Mikey"
+description='''
+Highlights every placeable spot around you and lets you place blocks in mid-air - precision
+scaffolding for builders.
+'''
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
